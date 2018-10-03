@@ -8,7 +8,7 @@ class EchoBot(Client):
         self.chat_IDs = []
         chats = self.fetchThreadList()
         for chat in chats:
-            if chat.name in chat_names:
+            if str(chat.name) in chat_names:
                 self.chat_IDs.append(chat.uid)
 
 
