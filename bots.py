@@ -2,6 +2,7 @@ from fbchat import log, Client
 from fbchat.models import *
 import os
 import threading
+import time
 
 
 class Bot(Client):
@@ -21,6 +22,7 @@ class SpamBot(Bot):
     def start(self):
         listen_thread = threading.Thread(target=self.listen, args=(), kwargs={})
         listen_thread.start()
+        time.sleep(1)
         self.send(Message(text=self.message), thread_id=self.thread_id, thread_type=self.thread_type)
 
 
