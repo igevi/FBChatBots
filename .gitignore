@@ -1,5 +1,2 @@
-# ignore virtual environment
 venv/
-
-# ignore notes
-notes/
+bots/__pycache__

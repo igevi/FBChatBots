@@ -1,17 +1,9 @@
 from fbchat import log, Client
 from fbchat.models import *
+from .bots import Bot
 import os
 import threading
 import time
-
-
-class Bot(Client):
-
-    def setChat(self, thread_id):
-        thread = self.fetchThreadInfo(thread_id)[thread_id]
-        self.thread_id = thread.uid
-        self.thread_type = thread.type
-
 
 class SpamBot(Bot):
 
